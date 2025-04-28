@@ -6,7 +6,6 @@
 
 // @lc code=start
 function lengthOfLongestSubstring(s: string): number {
-    
-};
+  return 1;
+}
 // @lc code=end
-

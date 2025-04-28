@@ -7,7 +7,7 @@
 // @lc code=start
 /**
  * Definition for singly-linked list.
- */
+//  */
 class ListNode {
   val: number;
   next: ListNode | null;
@@ -17,8 +17,8 @@ class ListNode {
   }
 }
 
-function addTwoNumbers(
-  l1: ListNode | null,
-  l2: ListNode | null
-): ListNode | null {}
+// function addTwoNumbers(
+//   l1: ListNode | null,
+//   l2: ListNode | null
+// ): ListNode | null {}
 // @lc code=end
