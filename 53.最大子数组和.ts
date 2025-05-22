@@ -6,23 +6,13 @@
 
 // @lc code=start
 function maxSubArray(nums: number[]): number {
-  let right = 0,
-    sum = 0,
-    res = -999999;
-  while (right < nums.length) {
-    sum += nums[right];
-    if (sum <= 0) {
-      right++;
-      if (sum >= res) {
-        res = sum;
-      }
-      sum = 0;
-    } else if (sum >= res) {
-      res = sum;
-      right++;
-    } else {
-      right++;
-    }
+  const dp = new Array(nums.length).fill(0);
+
+  dp[0] = nums[0];
+  let res = dp[0];
+  for (let index = 1; index < nums.length; index++) {
+    dp[index] = Math.max(nums[index], dp[index - 1] + nums[index]);
+    res = Math.max(res, dp[index]);
   }
   return res;
 }
